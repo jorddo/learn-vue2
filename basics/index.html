@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <p v-if="userAge > allowedAge">You are good to go.</p>
+      <p v-else-if="user === 'Jordan'">You are good to go.</p>
+      <p v-else>You are not allowed.</p> -->
+
+      <!-- <p v-if="checkUser()">Show it</p>
+      <p v-else>You are not allowed</p> -->
+
+      <p v-show="user === 'Jordan'">show it</p>
+      <p v-show="user !== 'Jordan'">dont show it</p>
+    </div>
+
+    <!-- <div id="app">
+      <img v-bind:src="src" v-bind:alt="alt" />
+      <hr />
+      <a v-bind:href="link">Go to Google</a>
+      <hr />
+      <p v-text="myText"></p>
+      <hr />
+      <div v-html="myHtml"></div>
+    </div> -->
+
+    <!-- <div id="app">
+      <p>{{ welcome() }}</p>
+      <p>{{ isItTrue ? 'yes' : 'no' }}</p>
+      <p>{{ array[1] }}</p>
+      <p>{{ obj.car }}</p>
+      <p>{{ func() }}</p>
+    </div> -->
+  </body>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        user: 'Jordan',
+        userAge: 15,
+        allowedAge: 18,
+      },
+      methods: {
+        checkUser() {
+          return this.user === 'Jordan' ? true : false;
+        },
+      },
+    });
+    // new Vue({
+    //   el: '#app',
+    //   data: {
+    //     src: 'https://picsum.photos/200/300',
+    //     alt: 'Random Image',
+    //     link: 'http://www.google.com',
+    //     myText: 'Hey everyone!',
+    //     myHtml: '<strong>Jordan is cool</strong>',
+    //   },
+    // });
+    // new Vue({
+    //   el: '#app',
+    //   data: {
+    //     greeting: 'Hello guys',
+    //     isItTrue: true,
+    //     array: ['frank', 'jane'],
+    //     obj: {
+    //       car: 'ferrari',
+    //     },
+    //     func: () => {
+    //       return 'Message from function';
+    //     },
+    //   },
+    //   methods: {
+    //     welcome() {
+    //       return this.greeting;
+    //     },
+    //   },
+    // });
+  </script>
+</html>
